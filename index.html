@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication table</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        body form h3 {
+            color: white;
+            text-shadow: 5px 5px 5px black;
+
+        }
+        body form {
+            background-image: linear-gradient(to right, crimson, purple, red, green , blue);
+            height: 500px;
+            width: 500px;
+            margin-left: 430px;
+            border-radius: 20px;
+        }
+        body form label { 
+            font-size: 30px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: black;
+            font-style: italic;
+            text-decoration: underline;
+            text-shadow: 2px 5px 8px black;
+        }
+        body form input{
+            background-color: transparent;
+            border: 2px solid black;
+            height: 30px;
+            color: white;
+            box-shadow: 5px 5px 5px black;
+        }
+        body form button{
+            background-color: black;
+            border: 2px solid black;
+            color: white;
+            padding: 20px;
+            box-shadow: 5px 5px 5px black;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Multiplication Table</h1>
+    <br>
+    <form action="" onsubmit="multiplication(); return false;">
+        <br><br>
+        <label for="table">Write any number to see the X (TABLE)</label>
+        <br><br><br>
+        <input type="number" name="table" id="table"><br><br><br>
+        <button type="submit">Submit</button>
+        <h3 id="table2"></h3>
+    </form>
+
+
+    <script>
+        function multiplication() {
+            let a = document.getElementById('table').value;
+            for (var b = 0; b < 10; b++) {
+                document.getElementById('table2').innerHTML += (`${a} x ${b + 1} = ${a * (b + 1)}` + "<br>");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
